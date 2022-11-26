@@ -135,11 +135,11 @@ Un formulaire va alors s'afficher. Il faut alors entrer la clé de déchiffremen
 
 ### 3. Pourquoi il est préférable de vérifier qu'un fichier token.bin n'est pas déjà présent ?
 
-> Pour éviter de réinitialiser (et donc perdre) le token à chaque fois qu'on lance le programme.
+> Pour éviter de réinitialiser (et donc perdre) le token à chaque fois qu'on lance le programme et d'éviter de chiffrer un fichier déjà chiffré.
 
 
 ### 4. Comment vérifier que la clef est la bonne ?
 
-> Nous pouvons vérifier que la clef est la bonne en dérivant la clé et le salt pour obtenir un token que l'on compare au token du fichier token.bin. (on va utiliser la fonction `do_derivation`)
+> Nous pouvons vérifier que la clef est la bonne en dérivant la clé et le salt (que l'on récupère dans le fichier salt.bin) pour obtenir un token. Ce token va être comparé au token du fichier token.bin (on va utiliser la fonction `do_derivation`). Si les deux tokens sont identiques, alors la clef est la bonne.
 
 
