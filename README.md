@@ -130,7 +130,7 @@ Un formulaire va alors s'afficher. Il faut alors entrer la clé de déchiffremen
 
 ### 2. Pourquoi ne pas hasher directement la clé et le salt ?
 
-> On utilise une fonction de dérivation de clé au lieu d'une fonction de hachage car on veut que la clé dérivée soit plus longue que la clé de base. On utilise une fonction de hachage pour le salt car on veut que le salt soit de taille fixe.
+> On utilise une fonction de dérivation de clé au lieu d'une fonction de hachage car on veut que la clé dérivée soit plus longue que la clé de base.
 
 
 ### 3. Pourquoi il est préférable de vérifier qu'un fichier token.bin n'est pas déjà présent ?
